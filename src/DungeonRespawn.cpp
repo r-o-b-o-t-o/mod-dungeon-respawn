@@ -1,5 +1,10 @@
 #include "DungeonRespawn.h"
 
+std::vector<PlayerRespawnData> respawnData;
+
+bool drEnabled;
+float respawnHpPct;
+
 bool DSPlayerScript::IsInsideDungeonRaid(Player* player)
 {
     if (!player)
@@ -285,10 +290,4 @@ void DSPlayerScript::OnLogout(Player* player)
             playersToTeleport.erase(it);
         }
     }
-}
-
-void SC_AddDungeonRespawnScripts()
-{
-    new DSWorldScript();
-    new DSPlayerScript();
 }

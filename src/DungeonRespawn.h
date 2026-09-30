@@ -25,11 +25,6 @@ struct PlayerRespawnData
     bool inDungeon;
 };
 
-std::vector<PlayerRespawnData> respawnData;
-
-bool drEnabled;
-float respawnHpPct;
-
 class DSPlayerScript : public PlayerScript
 {
 public:
