@@ -124,7 +124,7 @@ void DSWorldScript::OnAfterConfigLoad(bool reload)
         respawnData.clear();
     }
 
-    drEnabled = sConfigMgr->GetOption<bool>("DungeonRespawn.Enable", false);
+    drEnabled = sConfigMgr->GetOption<bool>("DungeonRespawn.Enable", true);
     respawnHpPct = sConfigMgr->GetOption<float>("DungeonRespawn.RespawnHealthPct", 50.0f);
 
     QueryResult qResult = CharacterDatabase.Query("SELECT `guid`, `map`, `x`, `y`, `z`, `o` FROM `dungeonrespawn_playerinfo`");
